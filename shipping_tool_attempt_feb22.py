@@ -11,8 +11,12 @@ ground_commercial.set_index('lbs', inplace=True)
 ground_residential.set_index('lbs', inplace=True)
 ground_surepost.set_index('lbs', inplace=True)
 
-# take input for the zip code
+# create title, header and subheader
+st.title('TCG Shipping Tool')
+st.header('Check UPS Shipping Costs')
+st.subheader('A TDS Application')
 
+# take input for the zip code
 zip_code = st.text_input("What is the zip?", "43123")
 weight = st.number_input("What is the weight?", 5)
 
