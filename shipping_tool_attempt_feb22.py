@@ -18,7 +18,7 @@ st.subheader('A TDS Application')
 
 # take input for the zip code
 zip_code = st.text_input("What is the zip?", "43123")
-weight = st.number_input("What is the weight?")
+weight = st.number_input("What is the weight?", 1)
 
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
