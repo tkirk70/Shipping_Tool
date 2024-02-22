@@ -36,9 +36,9 @@ from uszipcode import SearchEngine
 sr = SearchEngine()
 z = sr.by_zipcode(zip_code)
 print(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
-print(f'A package with a weight of {weight}lbs using {ground_residential.columns[0]} will cost: ${r_price}.')
-print(f'A package with a weight of {weight}lbs using {ground_commercial.columns[0]} will cost: ${c_price}.')
-print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]} will cost: ${sure_price}.')
+print(f'A package with a weight of {weight}lbs using {ground_residential.columns[0]} will cost: ${r_price:.2f}.')
+print(f'A package with a weight of {weight}lbs using {ground_commercial.columns[0]} will cost: ${c_price:.2f}.')
+print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]} will cost: ${sure_price:.2f}.')
 
 
 # figure out how many different ship services to present.
