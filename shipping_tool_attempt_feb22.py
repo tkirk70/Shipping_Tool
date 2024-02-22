@@ -21,7 +21,7 @@ weight = st.number_input("What is the weight?", 5)
 zip_code_clipped = zip_code[:3]
 # Use boolean indexing to extract the names of customers who ordered product A
 result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
-result[zip_code_clipped]
+# result[zip_code_clipped]
 
 c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
 r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
