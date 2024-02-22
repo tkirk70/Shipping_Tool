@@ -1,4 +1,5 @@
 import pandas as pd
+import streamlit as st
 
 ground_zones = pd.read_excel('TCG zone chart.xlsx', sheet_name='ground_zones', dtype=str)
 
@@ -11,8 +12,12 @@ ground_residential.set_index('lbs', inplace=True)
 ground_surepost.set_index('lbs', inplace=True)
 
 # take input for the zip code
-zip_code = input(str('What is the zip?'))
-weight = int(input('What is the weight?'))
+
+zip_code = st.text_input("What is the zip?", "43123")
+weight = st.text_input("What is the weight?", 5)
+
+# zip_code = input(str('What is the zip?'))
+# weight = int(input('What is the weight?'))
 zip_code_clipped = zip_code[:3]
 # Use boolean indexing to extract the names of customers who ordered product A
 result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
@@ -33,3 +38,12 @@ print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]
 
 
 # figure out how many different ship services to present.
+
+
+
+# from copilot
+# Display results
+st.write(f"{location_info} is in UPS Ground Zone {ups_ground_zone} for TCG Continuum.")
+st.write(f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${r_price}.")
+st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${c_price}.")
+st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${sure_price}.")
