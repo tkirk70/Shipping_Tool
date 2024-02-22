@@ -43,7 +43,7 @@ print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]
 
 # from copilot
 # Display results
-st.write(f"{location_info} is in UPS Ground Zone {ups_ground_zone} for TCG Continuum.")
+st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
 st.write(f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${r_price}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${c_price}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${sure_price}.")
