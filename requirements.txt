@@ -45,4 +45,4 @@ seaborn==0.12.2
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
-uszipcode=1.0.1
+uszipcode==1.0.1
