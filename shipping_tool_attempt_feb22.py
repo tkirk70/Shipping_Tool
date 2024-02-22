@@ -14,7 +14,7 @@ ground_surepost.set_index('lbs', inplace=True)
 # take input for the zip code
 
 zip_code = st.text_input("What is the zip?", "43123")
-weight = st.text_input("What is the weight?", 5)
+weight = st.number_input("What is the weight?", 5)
 
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
