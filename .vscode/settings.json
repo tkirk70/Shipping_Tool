@@ -1,3 +1,4 @@
 {
-    "taipyStudio.gUI.elementsFilePaths": []
+    "taipyStudio.gUI.elementsFilePaths": [],
+    "taipyStudio.config.mainPythonFile": "shipping_tool_attempt_feb22.py"
 }
