@@ -43,11 +43,22 @@ print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]
 
 # figure out how many different ship services to present.
 
+# calculate the distance
+import haversine as hs   
+from haversine import Unit
+
+loc1=(39.8815, -83.0930)
+loc2=(z.bounds_north, z.bounds_east)
+
+distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
+print(f'The distance from TCG is: {distance:,.0f} miles.')
+
 
 
 # from copilot
 # Display results
 st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
+st.write(f'The distance from TCG is: {distance:,.0f} miles.')
 st.write(f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${r_price:.2f}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${c_price:.2f}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${sure_price:.2f}.")
