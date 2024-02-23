@@ -12,7 +12,9 @@ ground_residential.set_index('lbs', inplace=True)
 ground_surepost.set_index('lbs', inplace=True)
 
 # create title, header and subheader
-st.title('TCG Shipping Tool', divider='✨')
+st.title('TCG Shipping Tool')
+st.divider('✨')
+# st.divider()
 st.header('Check UPS Shipping Costs')
 st.subheader('A TDS Application')
 
