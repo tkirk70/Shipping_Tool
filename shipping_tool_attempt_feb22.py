@@ -65,6 +65,8 @@ st.write(f"A package with a weight of {weight} lbs using {ground_residential.col
 st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${c_price:.2f}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${sure_price:.2f}.")
 
+st.divider()
+
 ## Create a sample DataFrame with latitude and longitude values
 data = pd.DataFrame({
     'latitude': [39.8815, z.bounds_north],
