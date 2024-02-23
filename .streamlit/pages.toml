@@ -1,9 +1,9 @@
 [[pages]]
 path = "shipping_tool_attempt_feb22.py"
 name = "Home"
-icon = "🏠"
+icon = ":house:"
 
 [[pages]]
 path = "pages/page2.py"
 name = "Page 2"
-icon = ":dog:"
+icon = ":books:"
