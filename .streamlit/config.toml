@@ -28,12 +28,12 @@ font="sans serif"
 # "serif", or "monospace".
 # font =
 
-[[pages]]
-path = "shipping_tool_attempt_feb22.py"
-name = "Home"
-icon = "🏠"
+# [[pages]]
+# path = "shipping_tool_attempt_feb22.py"
+# name = "Home"
+# icon = "🏠"
 
-[[pages]]
-path = "page2.py"
-name = "Page 2"
-icon = ":dog:"
+# [[pages]]
+# path = "page2.py"
+# name = "Page 2"
+# icon = ":dog:"
