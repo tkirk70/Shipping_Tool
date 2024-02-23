@@ -1,6 +1,11 @@
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title="Home",
+    page_icon=":house:",
+)
+
 ground_zones = pd.read_excel('TCG zone chart.xlsx', sheet_name='ground_zones', dtype=str)
 
 ground_commercial = pd.read_csv("2023_UPS Ground Commercial.csv")

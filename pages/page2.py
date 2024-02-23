@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Under Construction",
+    page_icon=":books:",
+)
+
+
 
 st.title('Displaying Three Columns')
 st.divider()
