@@ -2,7 +2,7 @@
 # base="light"
 primaryColor="#F63366"
 # backgroundColor="#FFFFFF" # white
-# backgroundColor="#2E899B" #teal
+# backgroundColor="#2E899B" # teal
 backgroundColor="#9797A0" # light gray
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
