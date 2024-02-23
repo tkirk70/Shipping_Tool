@@ -59,4 +59,4 @@ data = pd.DataFrame({
 })
  
 ## Create a map with the data
-st.map(data, zoom=9)
+st.map(data, zoom=6)
