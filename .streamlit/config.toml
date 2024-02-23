@@ -27,3 +27,13 @@ font="sans serif"
 # Font family for all text in the app, except code blocks. One of "sans serif",
 # "serif", or "monospace".
 # font =
+
+[[pages]]
+path = "shipping_tool_attempt_feb22.py"
+name = "Home"
+icon = "🏠"
+
+[[pages]]
+path = "page2.py"
+name = "Page 2"
+icon = ":dog:"
