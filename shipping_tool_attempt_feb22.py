@@ -54,8 +54,8 @@ st.write(f"A package with a weight of {weight} lbs using {ground_surepost.column
 
 ## Create a sample DataFrame with latitude and longitude values
 data = pd.DataFrame({
-    'latitude': [37.7749, 34.0522, 40.7128],
-    'longitude': [-122.4194, -118.2437, -74.0060]
+    'latitude': [37.7749, 34.0522, 40.7128, 39.8815],
+    'longitude': [-122.4194, -118.2437, -74.0060, -83.0930]
 })
  
 ## Create a map with the data
