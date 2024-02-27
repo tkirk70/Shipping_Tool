@@ -64,10 +64,10 @@ print(f'The distance from TCG is: {distance:,.0f} miles.')
 # add multiplier button for TCG or Customer cost
 st.button("Cost", type="primary")
 if st.button('Upcharge'):
-    st.write(":violet[20% Surcharge for Customer]")
+    st.write("**:orange[20% Surcharge for Customer]**")
     multiplier = 1.2
 else:
-    st.write(":violet[TCG Cost]")
+    st.write("**:orange[TCG Cost]**")
     multiplier = 1
 
 # from copilot
