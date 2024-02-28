@@ -1,6 +1,5 @@
 import streamlit as st
 
-st.title('Using set_page_config()')
 
 st.set_page_config(
     page_title="Ex-stream-ly Cool App",
@@ -13,3 +12,6 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+
+st.title('Using set_page_config()')
