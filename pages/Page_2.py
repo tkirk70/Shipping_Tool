@@ -5,7 +5,7 @@ st.set_page_config(
     page_icon="🚧",
 )
 
-
+st.snow()
 
 st.title('Displaying Three Columns')
 st.divider()
