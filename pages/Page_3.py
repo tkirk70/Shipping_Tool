@@ -6,8 +6,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'Get Help': 'https://tcg3pl.sharepoint.com/',
+        'Report a bug': "mailto:tds@tcg3pl.com",
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
