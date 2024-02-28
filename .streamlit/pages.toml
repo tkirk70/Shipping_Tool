@@ -7,3 +7,8 @@ icon = ":house:"
 path = "pages/Page_2.py"
 name = "Page 2"
 icon = "🚧"
+
+[[pages]]
+path = "pages/Page_3.py"
+name = "Page 3"
+icon = ":books:"
