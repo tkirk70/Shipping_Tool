@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon=":house:",
 )
 
-st.balloons()
+# st.balloons()
 
 ground_zones = pd.read_excel('TCG zone chart.xlsx', sheet_name='ground_zones', dtype=str)
 
