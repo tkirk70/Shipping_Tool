@@ -77,7 +77,10 @@ with col3:
     
 dim_weight = length * width * height / 139
 
-st.write(f'The dimensional weight of your package is: {int(round(dim_weight, 0))}lbs.')
+if dim_weight > weight:
+    st.write(f'For these dims dimensional weight: {int(round(dim_weight, 0))}lbs.') 
+else:
+    st.write(f'The dimensional weight of your package is: {int(round(dim_weight, 0))}lbs.')
 
 
 
