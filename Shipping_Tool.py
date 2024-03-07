@@ -32,6 +32,14 @@ with col4:
     
 with col5:
     weight = st.number_input("What is the weight?", 1)
+    
+from uszipcode import SearchEngine
+
+sr = SearchEngine()
+z = sr.by_zipcode(zip_code)
+
+st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
+st.write(f'The distance from TCG is: {distance:,.0f} miles.')
         
 col1, col2, col3 = st.columns(3)
 
@@ -59,14 +67,14 @@ c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
 r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
 sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
 
-from uszipcode import SearchEngine
+# from uszipcode import SearchEngine
 
-sr = SearchEngine()
-z = sr.by_zipcode(zip_code)
-print(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
-print(f'A package with a weight of {weight}lbs using {ground_residential.columns[0]} will cost: ${r_price:.2f}.')
-print(f'A package with a weight of {weight}lbs using {ground_commercial.columns[0]} will cost: ${c_price:.2f}.')
-print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]} will cost: ${sure_price:.2f}.')
+# sr = SearchEngine()
+# z = sr.by_zipcode(zip_code)
+# print(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
+# print(f'A package with a weight of {weight}lbs using {ground_residential.columns[0]} will cost: ${r_price:.2f}.')
+# print(f'A package with a weight of {weight}lbs using {ground_commercial.columns[0]} will cost: ${c_price:.2f}.')
+# print(f'A package with a weight of {weight}lbs using {ground_surepost.columns[0]} will cost: ${sure_price:.2f}.')
 
 
 # figure out how many different ship services to present.
@@ -103,8 +111,8 @@ with st.sidebar:
 
 # from copilot
 # Display results
-st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
-st.write(f'The distance from TCG is: {distance:,.0f} miles.')
+# st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
+# st.write(f'The distance from TCG is: {distance:,.0f} miles.')
 st.write(f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${multiplier*r_price:.2f}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${multiplier*c_price:.2f}.")
 st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${multiplier*sure_price:.2f}.")
