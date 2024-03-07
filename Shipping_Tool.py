@@ -61,8 +61,10 @@ distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
 print(f'The distance from TCG is: {distance:,.0f} miles.')
 
 
-st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
-st.write(f'The distance from TCG is: {distance:,.0f} miles.')
+# st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
+# st.write(f'The distance from TCG is: {distance:,.0f} miles.')
+
+st.write(f'{z.major_city},  {z.state}  {z.zipcode} is in UPS Ground Zone {result[zip_code_clipped]} for TCG Continuum.  {distance:,.0f} miles away.')
         
 col1, col2, col3 = st.columns(3)
 
