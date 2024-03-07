@@ -44,6 +44,12 @@ c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
 r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
 sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
 
+from uszipcode import SearchEngine
+
+sr = SearchEngine()
+z = sr.by_zipcode(zip_code)
+
+
 # calculate the distance
 import haversine as hs   
 from haversine import Unit
@@ -54,10 +60,6 @@ loc2=(z.bounds_north, z.bounds_east)
 distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
 print(f'The distance from TCG is: {distance:,.0f} miles.')
 
-from uszipcode import SearchEngine
-
-sr = SearchEngine()
-z = sr.by_zipcode(zip_code)
 
 st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
 st.write(f'The distance from TCG is: {distance:,.0f} miles.')
