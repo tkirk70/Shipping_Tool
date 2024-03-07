@@ -29,6 +29,21 @@ st.subheader('A TDS Application')
 zip_code = st.text_input("What is the zip?", "43123")
 weight = st.number_input("What is the weight?", 1)
 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    length = st.number_input("Length", 1)
+    
+with col2:
+    width = st.number_input("Width", 1)
+    
+with col3:
+    height = st.number_input("Height", 1)
+    
+dim_weight = length * width * height / 139
+
+st.write(f'The dimensional weight of your package is: {int(round(dim_weight, 0))}lbs.')
+
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
 zip_code_clipped = zip_code[:3]
