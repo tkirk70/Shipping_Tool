@@ -23,7 +23,7 @@ st.title('TCG Shipping Tool')
 # st.divider('✨')
 st.divider()
 st.header('Check UPS Shipping Costs')
-st.subheader('A TDS Application')
+# st.subheader('A TDS Application')
 
 # take input for the zip code
 col4, col5 = st.columns(2)
@@ -119,3 +119,6 @@ data = pd.DataFrame({
  
 ## Create a map with the data
 st.map(data, zoom=3)
+
+st.subheader('A TDS Application')
+st.markdown('<div style="text-align: right;">A TDS Application</div>', unsafe_allow_html=True)
