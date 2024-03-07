@@ -81,15 +81,25 @@ loc2=(z.bounds_north, z.bounds_east)
 distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
 print(f'The distance from TCG is: {distance:,.0f} miles.')
 
+# try adding buttons to sidebar
+with st.sidebar:
+    st.button("Cost", type="primary")
+    if st.button('Upcharge', type="primary"):
+        st.write("**:orange[20% Surcharge for Customer]**")
+        multiplier = 1.2
+    else:
+        st.write("**:orange[TCG Cost]**")
+        multiplier = 1
 
-# add multiplier button for TCG or Customer cost
-st.button("Cost", type="primary")
-if st.button('Upcharge', type="primary"):
-    st.write("**:orange[20% Surcharge for Customer]**")
-    multiplier = 1.2
-else:
-    st.write("**:orange[TCG Cost]**")
-    multiplier = 1
+
+# # add multiplier button for TCG or Customer cost
+# st.button("Cost", type="primary")
+# if st.button('Upcharge', type="primary"):
+#     st.write("**:orange[20% Surcharge for Customer]**")
+#     multiplier = 1.2
+# else:
+#     st.write("**:orange[TCG Cost]**")
+#     multiplier = 1
 
 # from copilot
 # Display results
