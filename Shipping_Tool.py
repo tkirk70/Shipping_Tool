@@ -124,7 +124,7 @@ st.map(data, zoom=3)
 # st.markdown('<div style="text-align: right;">A TDS Application</div>', unsafe_allow_html=True)
 
 # Custom CSS style for the text
-custom_style = '<div style="text-align: right; font-size: 20px;">A TDS Application</div>'
+custom_style = '<div style="text-align: right; font-size: 20px;">✨ A TDS Application</div>'
 
 # Render the styled text using st.markdown
 st.markdown(custom_style, unsafe_allow_html=True)
