@@ -26,9 +26,12 @@ st.header('Check UPS Shipping Costs')
 st.subheader('A TDS Application')
 
 # take input for the zip code
-zip_code = st.text_input("What is the zip?", "43123")
-weight = st.number_input("What is the weight?", 1)
-
+col4, col5 = st.columns(2)
+with col4:
+    zip_code = st.text_input("What is the zip?", "43123")
+ with col5:
+     weight = st.number_input("What is the weight?", 1)
+        
 col1, col2, col3 = st.columns(3)
 
 with col1:
