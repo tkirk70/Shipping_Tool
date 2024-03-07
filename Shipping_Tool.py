@@ -30,7 +30,7 @@ col4, col5 = st.columns(2)
 with col4:
     zip_code = st.text_input("What is the zip?", "43123")
  with col5:
-     weight = st.number_input("What is the weight?", 1)
+    weight = st.number_input("What is the weight?", 1)
         
 col1, col2, col3 = st.columns(3)
 
