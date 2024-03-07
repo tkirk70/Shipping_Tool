@@ -129,7 +129,7 @@ with st.sidebar:
 
 # try to center 3 lines
 # Custom CSS style for center alignment
-custom_style = '<div style="text-align: center;">'
+custom_style = '<div style="text-align: left; padding-left: 20px;">'
 
 # Add each line of text with proper formatting
 custom_style += f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${multiplier*r_price:.2f}.<br>"
