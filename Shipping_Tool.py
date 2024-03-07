@@ -123,9 +123,9 @@ with st.sidebar:
 # Display results
 # st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
 # st.write(f'The distance from TCG is: {distance:,.0f} miles.')
-st.write(f"A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${multiplier*r_price:.2f}.")
-st.write(f"A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${multiplier*c_price:.2f}.")
-st.write(f"A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${multiplier*sure_price:.2f}.")
+st.write(f"     A package with a weight of {weight} lbs using {ground_residential.columns[0]} will cost: ${multiplier*r_price:.2f}.")
+st.write(f"     A package with a weight of {weight} lbs using {ground_commercial.columns[0]} will cost: ${multiplier*c_price:.2f}.")
+st.write(f"     A package with a weight of {weight} lbs using {ground_surepost.columns[0]} will cost: ${multiplier*sure_price:.2f}.")
 
 st.divider()
 
