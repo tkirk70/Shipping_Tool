@@ -33,6 +33,27 @@ with col4:
 with col5:
     weight = st.number_input("What is the weight?", 1)
     
+# zip_code = input(str('What is the zip?'))
+# weight = int(input('What is the weight?'))
+zip_code_clipped = zip_code[:3]
+# Use boolean indexing to extract the names of customers who ordered product A
+result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
+# result[zip_code_clipped]
+
+c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
+r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
+sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
+
+# calculate the distance
+import haversine as hs   
+from haversine import Unit
+
+loc1=(39.8815, -83.0930)
+loc2=(z.bounds_north, z.bounds_east)
+
+distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
+print(f'The distance from TCG is: {distance:,.0f} miles.')
+
 from uszipcode import SearchEngine
 
 sr = SearchEngine()
@@ -56,16 +77,7 @@ dim_weight = length * width * height / 139
 
 st.write(f'The dimensional weight of your package is: {int(round(dim_weight, 0))}lbs.')
 
-# zip_code = input(str('What is the zip?'))
-# weight = int(input('What is the weight?'))
-zip_code_clipped = zip_code[:3]
-# Use boolean indexing to extract the names of customers who ordered product A
-result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
-# result[zip_code_clipped]
 
-c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
-r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
-sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
 
 # from uszipcode import SearchEngine
 
@@ -79,15 +91,7 @@ sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
 
 # figure out how many different ship services to present.
 
-# calculate the distance
-import haversine as hs   
-from haversine import Unit
 
-loc1=(39.8815, -83.0930)
-loc2=(z.bounds_north, z.bounds_east)
-
-distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
-print(f'The distance from TCG is: {distance:,.0f} miles.')
 
 # try adding buttons to sidebar
 with st.sidebar:
