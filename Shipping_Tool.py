@@ -45,7 +45,6 @@ r_price = ground_residential.loc[weight, result[zip_code_clipped][-1]]
 sure_price = ground_surepost.loc[weight, result[zip_code_clipped][-1]]
 
 from uszipcode import SearchEngine
-from sqlalchemy_mate.api import ExtendedBase
 
 sr = SearchEngine()
 z = sr.by_zipcode(zip_code)
