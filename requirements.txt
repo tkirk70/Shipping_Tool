@@ -47,3 +47,4 @@ seaborn==0.12.2
 six==1.16.0
     # via python-dateutil
 uszipcode==1.0.1
+sqlalchemy-mate==1.4.28.4
