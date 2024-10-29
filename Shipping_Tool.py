@@ -7,10 +7,7 @@ st.set_page_config(
 )
 
 # st.balloons()
-option = st.selectbox(
-    "Ship From Location",
-    ('Kentucky', 'Ohio')
-)
+
 
 if option == 'Kentucky':
     file = 'Zone chart for Kentucky locations.xlsx'
@@ -44,6 +41,10 @@ with col5:
     weight = st.number_input("What is the weight?", 1)
     
 with col6:
+    option = st.selectbox(
+        "Ship From Location",
+        ('Kentucky', 'Ohio')
+    )
     
     
 # zip_code = input(str('What is the zip?'))
