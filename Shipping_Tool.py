@@ -27,7 +27,7 @@ if option == 'Kentucky':
 else:
     file = 'TCG zone chart.xlsx'  
 
-
+st.write(file)
 
     
 ground_zones = pd.read_excel(file, sheet_name='ground_zones', dtype=str)
