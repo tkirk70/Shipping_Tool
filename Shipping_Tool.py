@@ -7,8 +7,18 @@ st.set_page_config(
 )
 
 # st.balloons()
+option = st.selectbox(
+    "Ship From Location",
+    ('Kentucky', 'Ohio')
+)
 
-ground_zones = pd.read_excel('TCG zone chart.xlsx', sheet_name='ground_zones', dtype=str)
+if option == 'Kentucky':
+    file = 'Zone chart for Kentucky locations.xlsx'
+else:
+    file = 'TCG zone chart.xlsx'
+    
+ground_zones = pd.read_excel(file, sheet_name='ground_zones', dtype=str)
+# ground_zones_ky = pd.read_excel('Zone chart for Kentucky locations.xlsx', sheet_name='ground_zones', dtype=str)
 
 ground_commercial = pd.read_csv("2023_UPS Ground Commercial.csv")
 ground_residential = pd.read_csv("2023_UPS Ground Residential.csv")
@@ -26,12 +36,15 @@ st.header('Check UPS Shipping Costs')
 # st.subheader('A TDS Application')
 
 # take input for the zip code
-col4, col5 = st.columns(2)
+col6, col4, col5 = st.columns(3)
 with col4:
     zip_code = st.text_input("What is the zip?", "43123")
     
 with col5:
     weight = st.number_input("What is the weight?", 1)
+    
+with col6:
+    
     
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
@@ -78,6 +91,7 @@ with col3:
     height = st.number_input("Height", 1)
     
 dim_weight = length * width * height / 139
+# usps_dim_weight = length * width * height / 166 not used for under 1 cubic foot.
 
 if dim_weight > weight:
     st.write(f'The dimensional weight of your package is: {int(round(dim_weight, 0))}lbs.')
@@ -164,3 +178,5 @@ custom_style = '<div style="text-align: right; font-size: 20px;">✨ A TDS Appli
 
 # Render the styled text using st.markdown
 st.markdown(custom_style, unsafe_allow_html=True)
+
+# over twenty lbs, post office becomes less competative.
