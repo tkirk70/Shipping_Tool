@@ -54,6 +54,8 @@ st.header('Check UPS Shipping Costs')
 zip_code_clipped = zip_code[:3]
 # Use boolean indexing to extract the names of customers who ordered product A
 result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
+
+st.write(result)
 # result[zip_code_clipped]
 
 c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
