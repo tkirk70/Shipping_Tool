@@ -176,7 +176,15 @@ data = pd.DataFrame({
     'longitude': [-83.0930, z.bounds_east]
 })
  
+data_ky = pd.DataFrame({
+    'latitude': [37.7719, z.bounds_north],
+    'longitude': [-87.1112, z.bounds_east]
+})
 ## Create a map with the data
+if option == 'Kentucky':
+    data = data_ky
+else:
+    data = data
 st.map(data, zoom=3)
 
 # st.subheader('A TDS Application')
