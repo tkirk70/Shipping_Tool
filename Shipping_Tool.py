@@ -70,7 +70,7 @@ z = sr.by_zipcode(zip_code)
 import haversine as hs   
 from haversine import Unit
 
-loc1=(39.8815, -83.0930)
+loc1=(39.8815, -83.0930 if option == 'Kentucky' else 37.7719, -87.1112)
 loc2=(z.bounds_north, z.bounds_east)
 
 distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
