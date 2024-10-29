@@ -9,10 +9,7 @@ st.set_page_config(
 # st.balloons()
 
 
-if option == 'Kentucky':
-    file = 'Zone chart for Kentucky locations.xlsx'
-else:
-    file = 'TCG zone chart.xlsx'
+
     
 ground_zones = pd.read_excel(file, sheet_name='ground_zones', dtype=str)
 # ground_zones_ky = pd.read_excel('Zone chart for Kentucky locations.xlsx', sheet_name='ground_zones', dtype=str)
@@ -46,7 +43,10 @@ with col6:
         ('Kentucky', 'Ohio')
     )
     
-    
+if option == 'Kentucky':
+    file = 'Zone chart for Kentucky locations.xlsx'
+else:
+    file = 'TCG zone chart.xlsx'   
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
 zip_code_clipped = zip_code[:3]
