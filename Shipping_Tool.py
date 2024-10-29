@@ -8,6 +8,25 @@ st.set_page_config(
 
 # st.balloons()
 
+# take input for the zip code
+col6, col4, col5 = st.columns(3)
+with col4:
+    zip_code = st.text_input("What is the zip?", "43123")
+    
+with col5:
+    weight = st.number_input("What is the weight?", 1)
+    
+with col6:
+    option = st.selectbox(
+        "Ship From Location",
+        ('Kentucky', 'Ohio')
+    )
+    
+if option == 'Kentucky':
+    file = 'Zone chart for Kentucky locations.xlsx'
+else:
+    file = 'TCG zone chart.xlsx'  
+
 
 
     
@@ -29,24 +48,7 @@ st.divider()
 st.header('Check UPS Shipping Costs')
 # st.subheader('A TDS Application')
 
-# take input for the zip code
-col6, col4, col5 = st.columns(3)
-with col4:
-    zip_code = st.text_input("What is the zip?", "43123")
-    
-with col5:
-    weight = st.number_input("What is the weight?", 1)
-    
-with col6:
-    option = st.selectbox(
-        "Ship From Location",
-        ('Kentucky', 'Ohio')
-    )
-    
-if option == 'Kentucky':
-    file = 'Zone chart for Kentucky locations.xlsx'
-else:
-    file = 'TCG zone chart.xlsx'   
+ 
 # zip_code = input(str('What is the zip?'))
 # weight = int(input('What is the weight?'))
 zip_code_clipped = zip_code[:3]
