@@ -27,7 +27,7 @@ if option == 'Kentucky':
 else:
     file = 'TCG zone chart.xlsx'  
 
-st.write(file)
+# st.write(file)
 
     
 ground_zones = pd.read_excel(file, sheet_name='ground_zones', dtype=str)
@@ -55,7 +55,7 @@ zip_code_clipped = zip_code[:3]
 # Use boolean indexing to extract the names of customers who ordered product A
 result = dict(zip(ground_zones['Dest. ZIP'], ground_zones['Ground']))
 
-st.write(result)
+# st.write(result)
 # result[zip_code_clipped]
 
 c_price = ground_commercial.loc[weight, result[zip_code_clipped][-1]]
