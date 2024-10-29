@@ -70,11 +70,17 @@ z = sr.by_zipcode(zip_code)
 import haversine as hs   
 from haversine import Unit
 
-loc1=(39.8815, -83.0930 if option == 'Kentucky' else 37.7719, -87.1112)
+loc1=(39.8815, -83.0930)
+loc3=(37.7719, -87.1112)
 loc2=(z.bounds_north, z.bounds_east)
 
-distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
-print(f'The distance from TCG is: {distance:,.0f} miles.')
+if option == 'Ohio':
+    distance=hs.haversine(loc1,loc2,unit=Unit.MILES)
+    print(f'The distance from TCG is: {distance:,.0f} miles.')
+else:
+    distance=hs.haversine(loc3,loc2,unit=Unit.MILES)
+    print(f'The distance from TCG KY Warehouse is: {distance:,.0f} miles.')
+    
 
 
 # st.write(z.major_city + ', ' + z.state + '  ' + z.zipcode + ' is in UPS Ground Zone ' + result[zip_code_clipped] + ' for TCG Continuum.')
